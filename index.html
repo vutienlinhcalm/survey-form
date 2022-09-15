@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>SURVEY-FORM</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>freeCodeCamp Survey Form</h1>
+        </div>
+        <div>
+            <p>Thank you for taking the time to help us improve the platform</p>
+        </div>
+    </header>
+
+<form id ="survey-form" action="">
+<!--
+Form
+-->
+    <div>
+        <lable id="name-label">Name</lable>
+        <input id="name" type="text" placeholder="Vu Tien Linh"></input>
+    </div>
+
+    <div>
+        <lable id="email-label">Email</lable>
+        <input id="email" type="email" placeholder="19521760@gmail.com"></input>
+    </div>
+    
+    <div>
+        <lable id="number-label">Phone</lable>
+        <input id="number" type="number" min="0" max="10" placeholder="123-456-789"></input>
+    </div>
+    
+    <div>
+        <label id="age-lable" for="">Age</label>
+        <input id="age" type="number" min="0" max="10" placeholder="20"></input>
+    </div>
+<!--
+    recommend freeCodeCamp
+-->
+    <div>
+        <p>Would you recommend freeCodeCamp to a friend ?</p>
+        <label>
+            <input type="radio" name="user-recommend" class="input-radio">
+            Definitely
+        </label>
+        <label>
+            <input type="radio" name="user-recommend" class="input-radio">
+            Maybe
+        </label>
+        <label>
+            <input type="radio" name="user-recommend" class="input-radio">
+            Not sure
+        </label>
+    </div>
+    <!--
+    describes your current role
+-->
+    <div>
+        <p>Which option best describes your current role ?</p>
+        <select id="dropdown">
+            <option disabled selected  value>Select an option</option>
+            <option value="Challenges">Challenges</option>
+            <option value="Projects">Projects</option>
+            <option value="Projects">Projects</option>
+            <option value="community">Community</option>
+            <option value="open Source">Open Source</option>
+          </select>
+    </div>
+  <!--
+    you like to see improved
+  -->
+  <div>
+    <p>What would you like to see improved? 
+        <span class="clue">(Check all that apply)</span>
+    </p>
+    <label>
+        <input type="checkbox" name="prefer" value="front-end-projects" class="input-checkbox">
+        Front-end Projects
+    </label>
+    <label>
+        <input type="checkbox" name="prefer" value="Data Visualization" class="input-checkbox">
+        Data Visualization
+    </label>
+    <label>
+        <input type="checkbox" name="prefer" value="Challenges" class="input-checkbox">
+        Challenges
+    </label>
+    <label>
+        <input type="checkbox" name="prefer" value="Open Source Community" class="input-checkbox">
+        Open Source Community
+    </label>
+    <label>
+        <input type="checkbox" name="prefer" value="Gitter help rooms" class="input-checkbox">
+        Gitter help rooms
+    </label>
+    <label>
+        <input type="checkbox" name="prefer" value="Videos" class="input-checkbox">
+        Videos
+    </label>
+    <label>
+        <input type="checkbox" name="prefer" value="City Meetups" class="input-checkbox">
+        City Meetups
+    </label>
+    <label>
+        <input type="checkbox" name="prefer" value="Wiki" class="input-checkbox">
+        Wiki
+    </label>
+    <label>
+        <input type="checkbox" name="prefer" value="Forum" class="input-checkbox">
+        Forum
+    </label>
+    <label>
+        <input type="checkbox" name="prefer" value="Additional Courses" class="input-checkbox">
+        Additional Courses
+    </label>
+   
+  </div>
+  <!--
+    comments or suggestions
+  -->
+  <div>
+    <p>Any comments or suggestions?</p>
+    <textarea name="viewportinput-textarea" id="comments" cols="30" rows="10" placeholder="Enter your comment here..."></textarea>
+  </div>
+   <!--
+submit form  
+   -->
+   <div>
+    <button type="submit" name="submit" value="Submit">Submit</button>
+   </div>
+    
+    
+  
+    
+
+</form>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/js/bootstrap.min.js" 
+    integrity="sha512-vyRAVI0IEm6LI/fVSv/Wq/d0KUfrg3hJq2Qz5FlfER69sf3ZHlOrsLriNm49FxnpUGmhx+TaJKwJ+ByTLKT+Yg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
