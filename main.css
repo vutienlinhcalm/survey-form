@@ -9,7 +9,7 @@ body{
     font-size: 1rem;
     font-weight: 400px;
     line-height: 1.4;
-    color: var(--color-white);
+    color: #fff;
 }
 .container{
     max-width: 720px;
@@ -42,7 +42,7 @@ form{
     padding: 0.25rem;
 }
 label{
-    display: flex;
+    color: #fff;
     align-items: center;
     font-size: 1.125em;
     margin-bottom: 0.5rem;

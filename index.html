@@ -8,80 +8,83 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
     <title>SURVEY-FORM</title>
 </head>
 <body>
     <div class="container">
         <header>
             <div id="title" class="text-center">
-                <h1 >freeCodeCamp Survey Form</h1>
+                <h1 class="text-light">Vũ Tiến Linh Survey Form</h1>
             </div>
             <div id="description" class="description text-center">
-                <p>Thank you for taking the time to help us improve the platform</p>
+                <p class="text-light">Thank you for taking the time to help us improve the platform</p>
             </div>
         </header>
     
-    <form id ="survey-form" action="">
+    <form id ="survey-form">
     <!--
     Form
     -->
         <div class="form-group">
-            <lable id="name-label" for="name">Name</lable>
-            <input id="name" type="text" placeholder="Vu Tien Linh" class="form-control"></input>
+            <lable class="text-light" id="name-label" for="name">Name</lable>
+            <input name="Name" id="name" type="text" value="" placeholder="Vu Tien Linh" class="form-control test"></input>
+            <span class="form-message text-danger" ></span>
         </div>
-    
         <div class="form-group">
-            <lable id="email-label">Email</lable>
-            <input id="email" type="email" placeholder="19521760@gmail.com" class="form-control"></input>
+            <lable class="text-light" id="password-label" for="password">Password</lable>
+            <input name="Password" id="password" type="password" value="" placeholder="Vu Tien Linh" class="form-control test"></input>
+            <span class="text-danger form-message"></span>
+        </div>
+        <div class="form-group">
+            <lable class="text-light" id="Con-password-label" for="password">Confirm Password</lable>
+            <input name="Conpassword" id="Conpassword" value="" type="password" placeholder="Vu Tien Linh" class="form-control test"></input>
+            <span class="text-danger form-message"></span>
+        </div>
+        <div class="form-group">
+            <lable class="text-light" id="email-label">Email</lable>
+            <input name="Email" id="email" type="email" value="" placeholder="19521760@gmail.com" class="form-control test"></input>
+            <span class="text-danger form-message"></span>
         </div>
         
         <div class="form-group">
-            <lable id="number-label">Phone</lable>
-            <input id="number" type="number" min="0" max="10" placeholder="123-456-789" class="form-control"></input>
+            <lable class="text-light" id="phone-label">Phone</lable>
+            <input name="Phone" id="phone" type="text" value="" placeholder="0123456789" class="form-control test"></input>
+            <span class="text-danger form-message"></span>
         </div>
         
         <div class="form-group">
             <label id="age-lable" for="">Age</label>
-            <input id="age" type="number"placeholder="20" class="form-control"></input>
+            <input name="Age" id="age" type="number" value="" min="16" placeholder="20" class="form-control test"></input>
+            <span class="text-danger form-message"></span>
         </div>
          <!--
         describes your current role
-    -->
-    <div class="form-group">
-        <p>Which option best describes your current role ?</p>
-        <select id="dropdown" class="form-control">
-            <option disabled selected  value>Select an option</option>
-            <option value="Challenges">Challenges</option>
-            <option value="Projects">Projects</option>
-            <option value="Projects">Projects</option>
-            <option value="community">Community</option>
-            <option value="open Source">Open Source</option>
-          </select>
-    </div>
-    <!--
         recommend freeCodeCamp
     -->
         <div class="form-group">
-            <p>Would you recommend freeCodeCamp to a friend ?</p>
-            <label>
-                <input type="radio" name="user-recommend" class="input-radio">
+            <p class="text-light">Would you recommend freeCodeCamp to a friend ?</p>
+            <label class="d-flex">
+                <input type="radio" value="Definitely" name="user-recommend" class="input-radio test">
                 Definitely
             </label>
-            <label>
-                <input type="radio" name="user-recommend" class="input-radio">
+            <label class="d-flex">
+                <input type="radio" value="Maybe" name="user-recommend" class="input-radio test">
                 Maybe
             </label>
-            <label>
-                <input type="radio" name="user-recommend" class="input-radio">
-                Not sure
+            <label class="d-flex">
+                <input type="radio" value="Not sure" name="user-recommend" class="input-radio test">
+                Not sure  
             </label>
+            <span class="text-danger form-message"></span>
         </div>
            <!--
         describes your current role
     -->
     <div class="form-group">
-        <p>What is your favorite feature of freeCodeCam?</p>
-        <select id="most-like" name="mostlike" class="form-control">
+        <p class="text-light">What is your favorite feature of freeCodeCam?</p>
+        <select id="most-like" name="mostlike" class="form-control test">
             <option disabled selected  value>Select an option</option>
             <option value="Challenges">Challenges</option>
             <option value="Projects">Projects</option>
@@ -89,63 +92,71 @@
             <option value="community">Community</option>
             <option value="open Source">Open Source</option>
           </select>
+        <span class="text-danger form-message"></span>
     </div>
       <!--
         you like to see improved
       -->
-      <div class="form-group">
-        <p>What would you like to see improved? 
+      <div class="form-group primary">
+        <p class="text-light">What would you like to see improved? 
             <span class="clue">(Check all that apply)</span>
         </p>
-        <label>
+        <label class="d-flex">
             <input type="checkbox" name="prefer" value="front-end-projects" class="input-checkbox">
             Front-end Projects
         </label>
-        <label>
+        <label class="d-flex">
             <input type="checkbox" name="prefer" value="Data Visualization" class="input-checkbox">
             Data Visualization
         </label>
-        <label>
+        <label class="d-flex">
             <input type="checkbox" name="prefer" value="Challenges" class="input-checkbox">
             Challenges
         </label>
-        <label>
+        <label class="d-flex">
             <input type="checkbox" name="prefer" value="Open Source Community" class="input-checkbox">
             Open Source Community
         </label>
-        <label>
+        <label class="d-flex">
             <input type="checkbox" name="prefer" value="Gitter help rooms" class="input-checkbox">
             Gitter help rooms
         </label>
-        <label>
+        <label class="d-flex">
             <input type="checkbox" name="prefer" value="Videos" class="input-checkbox">
             Videos
         </label>
-        <label>
+        <label class="d-flex">
             <input type="checkbox" name="prefer" value="City Meetups" class="input-checkbox">
             City Meetups
         </label>
-        <label>
+        <label class="d-flex">
             <input type="checkbox" name="prefer" value="Wiki" class="input-checkbox">
             Wiki
         </label>
-        <label>
+        <label class="d-flex">
             <input type="checkbox" name="prefer" value="Forum" class="input-checkbox">
             Forum
         </label>
-        <label>
+        <label class="d-flex">
             <input type="checkbox" name="prefer" value="Additional Courses" class="input-checkbox">
             Additional Courses
         </label>
-       
+       <span class="text-danger form-message"></span>
       </div>
       <!--
         comments or suggestions
       -->
       <div class="form-group">
-        <p>Any comments or suggestions?</p>
+        <p class="text-light">Any comments or suggestions?</p>
         <textarea name="viewportinput-textarea" id="comments" cols="30" rows="10" placeholder="Enter your comment here..." class="input-textarea"></textarea>
+        <span class="text-danger form-message"></span>
       </div>
+
+      <div class="form-group">
+        <lable class="text-light" id="file-label">Minh Chứng</lable>
+        <input name="file" id="file" type="file" value="" class="form-control test"></input>
+        <span class="text-danger form-message"></span>
+    </div>
        <!--
     submit form  
        -->
@@ -153,17 +164,44 @@
         <button type="submit" name="submit" value="Submit" class="submit-button">Submit</button>
        </div>
         
-        
-      
-        
-    
     </form>
+    
     </div>
     
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/js/bootstrap.min.js" 
     integrity="sha512-vyRAVI0IEm6LI/fVSv/Wq/d0KUfrg3hJq2Qz5FlfER69sf3ZHlOrsLriNm49FxnpUGmhx+TaJKwJ+ByTLKT+Yg==" 
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="./survey.js"></script>
+
+    <script>
+        Validator({
+            form:'#survey-form',
+            errorSelector: '.form-message',
+            parentSelector:'.form-group',
+            rules: [
+                Validator.isRequired('#name','Vui lòng nhập họ tên'),// kiểm tra Name
+                Validator.isRequired('#email','vui lòng nhập email'),// Kiểm tra Email
+                Validator.isEmail('#email'),// Kiểm tra Email
+                Validator.isPhone('#phone'),// 
+                Validator.isRequired('#file'),//
+                Validator.isPassword('#password'),//
+                Validator.isRequired('#Conpassword','vui lòng xác nhận mật khẩu'),//
+                Validator.isConfirmPassword('#Conpassword',function(){
+                    return document.querySelector('#survey-form #password').value;
+                    
+                },'Mật khẩu nhập lại không chính xác'),
+                Validator.isAge('#age',16),//
+                Validator.isRecommentRadio('input[name="user-recommend"]','vui lòng chọn một phương thức'),
+                Validator.isRequired('#most-like'),
+                Validator.isRecommentRadio('input[name="prefer"]','vui chọn tính năng')
+
+            ],
+            onSubmit: function(data){
+                console.log(data)
+            }
+        });
+            
+    </script>
 </body>
 </html>
